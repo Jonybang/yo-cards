@@ -5,4 +5,8 @@ class Word < Base
 
   has_many :main_word_pairs, class_name: 'Pair', inverse_of: :main_word, foreign_key: 'main_word_id'
   has_many :rel_word_pairs, class_name: 'Pair', inverse_of: :rel_word, foreign_key: 'rel_word_id'
+
+  def to_s
+    content
+  end
 end

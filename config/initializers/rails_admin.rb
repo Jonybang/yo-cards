@@ -42,6 +42,16 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Word do
+    object_label_method do
+      :custom_label_method
+    end
+  end
+
+  def custom_label_method
+    "#{self.content}"
+  end
+
 end
 
 module ActiveRecord

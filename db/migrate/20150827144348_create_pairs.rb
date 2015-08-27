@@ -7,6 +7,8 @@ class CreatePairs < ActiveRecord::Migration
 
       t.belongs_to :main_word, index: true
       t.belongs_to :rel_word, index: true
+
+      t.timestamps null: false
     end
   end
 end

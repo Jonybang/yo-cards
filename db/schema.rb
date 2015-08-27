@@ -14,22 +14,28 @@
 ActiveRecord::Schema.define(version: 20150827144428) do
 
   create_table "dictionaries", force: :cascade do |t|
-    t.string "name"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "dictionaries_words", id: false, force: :cascade do |t|
-    t.integer "dictionary_id"
-    t.integer "word_id"
+    t.integer  "dictionary_id"
+    t.integer  "word_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   add_index "dictionaries_words", ["dictionary_id"], name: "index_dictionaries_words_on_dictionary_id"
   add_index "dictionaries_words", ["word_id"], name: "index_dictionaries_words_on_word_id"
 
   create_table "pairs", force: :cascade do |t|
-    t.integer "status"
-    t.integer "dictionary_id"
-    t.integer "main_word_id"
-    t.integer "rel_word_id"
+    t.integer  "status"
+    t.integer  "dictionary_id"
+    t.integer  "main_word_id"
+    t.integer  "rel_word_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   add_index "pairs", ["dictionary_id"], name: "index_pairs_on_dictionary_id"
@@ -42,16 +48,22 @@ ActiveRecord::Schema.define(version: 20150827144428) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   add_index "pictures", ["theme_id"], name: "index_pictures_on_theme_id"
 
   create_table "themes", force: :cascade do |t|
-    t.string "name"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "words", force: :cascade do |t|
-    t.string "content"
+    t.string   "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

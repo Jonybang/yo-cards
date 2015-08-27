@@ -1,0 +1,1 @@
+attributes :content, :dictionary_ids, :main_word_pair_ids, :rel_word_pair_ids

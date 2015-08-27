@@ -1,0 +1,1 @@
+attributes :image_url => :image
