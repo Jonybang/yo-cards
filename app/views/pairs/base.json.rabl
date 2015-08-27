@@ -1,2 +1,5 @@
 extends "dictionaries/pairs_content"
-attribute :dictionary_id
+attributes :dictionary_id
+node :status do |pair|
+    Pair.statuses[pair.status]
+end
