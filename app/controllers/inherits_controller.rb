@@ -13,6 +13,11 @@ class InheritsController < ApplicationController
       @resource = resource
     end
     def get_collection
+      @with_words = params[:with_words]
+      @with_pairs = params[:with_pairs]
+
+      @with_pictures = params[:with_pictures]
+      
       @collection = collection
       #if params[:q]
        # @collection = @collection.ransack(params[:q])
