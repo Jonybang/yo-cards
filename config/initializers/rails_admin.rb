@@ -1,5 +1,7 @@
 RailsAdmin.config do |config|
 
+  config.excluded_models << 'Change'
+
   ### Popular gems integration
 
   ## == Devise ==
