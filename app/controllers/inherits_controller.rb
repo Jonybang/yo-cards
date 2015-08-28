@@ -19,7 +19,7 @@ class InheritsController < ApplicationController
       @with_pictures = params[:with_pictures]
 
       @collection = collection
-      if params[:without]
+      if params[:without] && !params[:without].empty?
         @collection = @collection.where('id NOT IN (?)', params[:without].split(','))
       end
       #if params[:q]
