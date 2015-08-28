@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :pairs
     resources :themes
     resources :pictures
+
+    resources :changes
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

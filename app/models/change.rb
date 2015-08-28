@@ -1,0 +1,2 @@
+class Change < Base
+end
