@@ -1,9 +1,9 @@
-upstream puma {
+upstream puma_yo_cards {
   server unix:///home/deploy/apps/yo_cards/shared/tmp/sockets/yo_cards-puma.sock;
 }
 
 server {
-  listen 80 default_server deferred;
+  listen 80;
   server_name yo.jonybang.ru;
 
   root /home/deploy/apps/yo_cards/current/public;
@@ -22,7 +22,7 @@ server {
     proxy_set_header Host $http_host;
     proxy_redirect off;
 
-    proxy_pass http://puma;
+    proxy_pass http://puma_yo_cards;
   }
 
   error_page 500 502 503 504 /500.html;
