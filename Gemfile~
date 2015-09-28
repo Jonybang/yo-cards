@@ -63,19 +63,6 @@ group :production do
   gem 'pg'
 end
 
-gem 'dotenv-rails', :require => 'dotenv/rails-now'
-
-group :development do
-    gem 'capistrano',         require: false
-    gem 'capistrano-rvm',     require: false
-    gem 'capistrano-rails',   require: false
-    gem 'capistrano-bundler', require: false
-    gem 'capistrano3-puma',   require: false
-    gem 'capistrano-secrets-yml', '~> 1.0.0'
-end
-
-gem 'puma'
-
 gem 'inherited_resources', github: 'josevalim/inherited_resources', branch: 'master'
 
 gem 'oj'
