@@ -1,0 +1,36 @@
+<h1>YoCards API</h1>
+<h2>Objects:</h2>
+<ul>
+    <li>Words - <a href="/api/words">/api/words</a></li>
+    <li>Dictionaries - <a href="/api/dictionaries">/api/dictionaries</a></li>
+    <li>Pairs - <a href="/api/pairs">/api/pairs</a></li>
+    <li>Themes - <a href="/api/themes">/api/themes</a></li>
+    <li>Pictures - <a href="/api/pictures">/api/pictures</a></li>
+</ul>
+<h2>Arguments Examples:</h2>
+<ul>
+    <li>
+        Sorting:
+        <ul>
+            <li><a href="/api/words?sort=id_desc">/api/words?sort=id_asc</a></li>
+            <li><a href="/api/words?sort=updated_at_desc">/api/words?sort=updated_at_desc</a></li>
+        </ul>
+    </li>
+    <li>Limit - <a href="/api/words?limit=2">/api/words?limit=2</a></li>
+    <li>Without - <a href="/api/words?without=1,2">/api/words?without=1,2</a></li>
+    <li>
+        With inherited objects:
+        <ul>
+            <li><a href="/api/themes?with_pictures=1">/api/themes?with_pictures=1</a></li>
+            <li><a href="/api/dictionaries?with_words=1&with_pairs=1">/api/dictionaries?with_words=1&with_pairs=1</a></li>
+        </ul>
+    </li>
+</ul>
+<h2>Extra Features</h2>
+<ul>
+    <li>Changes - <a href="/api/changes?sort=updated_at_desc&from_date=2015-10-11T11:57:04.072Z">/api/changes?sort=updated_at_desc&from_date=2015-10-11T11:57:04.072Z</a></li>
+</ul>
+<h2>Other</h2>
+<ul>
+    <li>Adminpanel - <a href="/adminpanel">/adminpanel</a></li>
+</ul>

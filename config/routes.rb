@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'api' => 'api#index'
   scope '/api', :defaults => {format: :json} do
     resources :words
     resources :dictionaries
