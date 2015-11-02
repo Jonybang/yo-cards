@@ -21,6 +21,9 @@ class ChangesController < InheritsController
           @collection = @collection.sort{ |a, b| a[sym] <=> b[sym] }
         end
       end
+      if params[:from_date]
+        @collection = @collection.select {|v| v[:updated_at] > params[:from_date]}
+      end
       if params[:limit]
         @collection = @collection.take(params[:limit].to_i)
       end
