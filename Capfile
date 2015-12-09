@@ -22,8 +22,6 @@ require 'capistrano/rails/migrations'
 require 'capistrano/puma'
 require 'capistrano/secrets_yml'
 require 'capistrano/postgresql'
-require 'dotenv'
-require 'dotenv/tasks'
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
 Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
